@@ -54,4 +54,4 @@ Current Database Info: user=nayan,password=Admin123,host=localhost,database=naya
 python main.py
 
 # License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the <a href="https://nayanbastola.com/wp-content/uploads/2023/05/license.txt" target="_blank">LICENSE file</a>  for details.
