@@ -5,7 +5,7 @@
 </p>
 
 # 🔗 Setup File 
-currently being uploaded
+<a href ="https://nayanbastola.com/wp-content/uploads/2023/05/frosty_inv_mgmt_setup.zip" target="_blank">Download Setup File </a>
 
 # Background
 Frosty Inventory Management Project was initially built as a side project for a multinational motor company and is currently being used by their IT Service department to keep track of their inventory. 
