@@ -46,7 +46,9 @@ git https://github.com/GM-Frost/Frosty-Inv-Management.git
 
 2) Download SQL
 upload the Databasefiles provided.
-Current Database Info: user=nayan,password=Admin123,host=localhost,database=nayan_inventory_management
+Current Database Info: user="root",password="Admin123",host="localhost",database="gmfrost_inv_mgmt"
+
+Application Login: username= admin123, password= admin123
 
 3) Install the required packages
 
