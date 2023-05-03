@@ -5,12 +5,20 @@ import mysql.connector
 class conndb:
 
     def __init__(self):
+<<<<<<< HEAD
         self.cnx = mysql.connector.connect(user="root",password="Admin123",host="localhost",database="gmfrost_inv_mgmt")
+=======
+        self.cnx = mysql.connector.connect(user="nayan",password="Admin123",host="localhost",database="nayan_inventory_management")
+>>>>>>> ac7233c0cd6ad81ba3b88d1377a90e0eb6048217
         self.cursor = self.cnx.cursor()
     
     def create_connection(self):
         try:
+<<<<<<< HEAD
             cnx = mysql.connector.connect(user="root",password="Admin123",host="localhost",database="gmfrost_inv_mgmt")
+=======
+            cnx = mysql.connector.connect(user="nayan",password="Admin123",host="localhost",database="nayan_inventory_management")
+>>>>>>> ac7233c0cd6ad81ba3b88d1377a90e0eb6048217
             conn = cnx.cursor()
             conn.close()
             return "Connected"
@@ -23,13 +31,21 @@ class conndb:
         return result
         
     def queryExecute(self,strsql):
+<<<<<<< HEAD
         cnx = mysql.connector.connect(user="root",password="Admin123",host="localhost",database="gmfrost_inv_mgmt")
+=======
+        cnx = mysql.connector.connect(user="nayan",password="Admin123",host="localhost",database="nayan_inventory_management")
+>>>>>>> ac7233c0cd6ad81ba3b88d1377a90e0eb6048217
         conn = cnx.cursor()
         conn.execute(strsql)
         cnx.commit()
 
     def queryClose(self,strsql):
+<<<<<<< HEAD
         cnx = mysql.connector.connect(user="root",password="Admin123",host="localhost",database="gmfrost_inv_mgmt")
+=======
+        cnx = mysql.connector.connect(user="nayan",password="Admin123",host="localhost",database="nayan_inventory_management")
+>>>>>>> ac7233c0cd6ad81ba3b88d1377a90e0eb6048217
         conn = cnx.cursor()
         conn.close(strsql)
          
