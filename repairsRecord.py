@@ -268,11 +268,7 @@ class RepairsRecord():
             dt_string = now.strftime("%Y-%m-%d %H:%M:%S")
             changeDate = dt_string
 
-<<<<<<< HEAD
             update_inuse_inventory = f"""UPDATE inuseinventory SET LaptopSerial='{actuallaptopSerial}',ModelNumber='{actualLaptopModel}',PreviousLaptopSerial='',CurrentStatus='Repaired',UpdatedBy='{updatedBy}',ChangeDate='{changeDate}' WHERE CurrentStatus='Sent For Repairs' and users='{lastUser}'"""
-=======
-            update_inuse_inventory = f"""UPDATE inuseinventory SET LaptopSerial='{actuallaptopSerial}',ModelNumber='{actualLaptopModel}',PreviousLaptopSerial='',CurrentStatus='Repaired',UpdatedBy='{updatedBy}',ChangeDate='{changeDate}' WHERE CurrentStatus='Sent For Repairs' and user='{lastUser}'"""
->>>>>>> ac7233c0cd6ad81ba3b88d1377a90e0eb6048217
             send_to_server_inv = f"""INSERT INTO laptopinventory (LaptopSerial,LaptopModel,LastUser,LaptopStatus,UpdatedBy,ChangeDate) VALUES ('{spareLaptopSerial}','{spareLaptopModel}','{lastUser}','Spare','{updatedBy}','{changeDate}')"""
             delete_laptop_from_repairs = f"""DELETE FROM repairsrecord WHERE RepairLaptopSerial='{actuallaptopSerial}'"""
 

@@ -510,32 +510,20 @@ class InuseInvFunctions():
             dt_string = now.strftime("%Y-%m-%d %H:%M:%S")
             changeDate = dt_string
             currentDate = changeDate
-<<<<<<< HEAD
             conn = connections.conndb()
             
-=======
-
->>>>>>> ac7233c0cd6ad81ba3b88d1377a90e0eb6048217
             insert_inuseInv_data = f"""
             INSERT INTO inuseinventory (users,LaptopSerial,ModelNumber,CurrentStatus,officeKeyboard,homeKeyboard,officeMouse,homeMouse,officeHeadphone,homeHeadphone,officeMonitor,homeMonitor,officeDock,homeDock,officeExtra,homeExtra,UpdatedBy,ChangeDate) VALUES 
             ('{laptopUser}','{laptopSerial}','{laptopModel}','{inUsecurrentStatus}','{officeKeyboardValue}','{homeKeyboardValue}','{officeMouseValue}','{homeMouseValue}','{officeHeadphoneValue}','{homeHeadphoneValue}','{officeMonitorValue}','{homeMonitorValue}','{officeDockValue}','{homeDockValue}','{officeExtraEquip}','{homeExtraEquip}','{updatedBy}','{currentDate}');
             """
-<<<<<<< HEAD
             
-=======
-            conn = connections.conndb()
->>>>>>> ac7233c0cd6ad81ba3b88d1377a90e0eb6048217
             if (laptopSerial=="")or(laptopModel=="")or(laptopUser==""):
                 QMessageBox.information(self, "Failed", "Please Fill the Required Fields")
             else:
                 if not (conn.queryExecute(insert_inuseInv_data)):
                     delete_laptop_from_server = f"DELETE FROM laptopinventory WHERE LaptopSerial='{laptopSerial}'"
                     if not (conn.queryExecute(delete_laptop_from_server)):
-<<<<<<< HEAD
                         conn.queryClose
-=======
-                        
->>>>>>> ac7233c0cd6ad81ba3b88d1377a90e0eb6048217
                         ei.displayEquipmentsTable(self,ei.getAllEquipments(self))
                         self.ui.txtInuseLaptopSerial.setText("")
                         self.ui.txtInuseSLNO.setText("")
@@ -622,10 +610,6 @@ class InuseInvFunctions():
                         # self.ui.notificationBtn.click()
                         # self.ui.notificationMsg.setText("Record Added !!!")
                         QMessageBox.information(self, "Success", "Record Added")
-<<<<<<< HEAD
-=======
-                        conn.queryClose
->>>>>>> ac7233c0cd6ad81ba3b88d1377a90e0eb6048217
                     else:
                         QMessageBox.warning(self, "Failed", "Sorry! Couldnt Add to Records. Please Try again")
                       
